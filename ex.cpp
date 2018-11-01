@@ -50,7 +50,7 @@ void ex::receivedenu(const currency::transfer &transfer) {
       .send();
 }
 
-void ex::receivedenu(const currency::transfer &transfer) {
+void ex::receivedeth(const currency::transfer &transfer) {
   if (transfer.to != _self) {
     return;
   }
@@ -109,7 +109,7 @@ void ex::apply(account_name contract, action_name act) {
 
     enumivo_assert(transfer.quantity.symbol == ETH_SYMBOL,
                  "Must send ETH");
-    receivedenu(transfer);
+    receivedeth(transfer);
     return;
   }
 
