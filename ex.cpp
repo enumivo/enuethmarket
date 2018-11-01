@@ -62,7 +62,7 @@ void ex::receivedeth(const currency::transfer &transfer) {
   eth_balance = eth_balance/100000000;
 
   double received = transfer.quantity.amount;
-  received = received/10000;
+  received = received/100000000;
 
   // get ENU balance
   double enu_balance = enumivo::token(N(enu.token)).
