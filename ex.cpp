@@ -125,8 +125,8 @@ void ex::apply(account_name contract, action_name act) {
 
 extern "C" {
 [[noreturn]] void apply(uint64_t receiver, uint64_t code, uint64_t action) {
-  ex enuenu(receiver);
-  enuenu.apply(code, action);
+  ex enueth(receiver);
+  enueth.apply(code, action);
   enumivo_exit(0);
 }
 }
